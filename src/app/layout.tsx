@@ -14,35 +14,63 @@ import EasterEggs from "@/components/easter-eggs";
 import { config } from "@/data/config";
 import SocketContextProvider from "@/contexts/socketio";
 import RemoteCursors from "@/components/realtime/remote-cursors";
+import { StructuredData } from "@/components/structured-data";
 
 export const metadata: Metadata = {
-  title: config.title,
+  metadataBase: new URL('https://hasanisufov.co.uk'),
+  title: {
+    default: config.title,
+    template: `%s | ${config.title}`
+  },
   description: config.description.long,
   keywords: config.keywords,
-  authors: [{ name: config.author }],
+  authors: [{ name: config.author, url: 'https://hasanisufov.co.uk' }],
+  creator: config.author,
+  publisher: config.author,
+  
   openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: config.site,
+    siteName: config.title,
     title: config.title,
     description: config.description.short,
-    url: config.site,
     images: [
       {
         url: config.ogImg,
-        width: 800,
-        height: 600,
-        alt: "Portfolio preview",
+        width: 1200,
+        height: 630,
+        alt: "Hasan Isufov Portfolio",
       },
     ],
-    type: "website",
   },
+  
   twitter: {
     card: "summary_large_image",
     title: config.title,
     description: config.description.short,
     images: [config.ogImg],
+    creator: '@hasanisufov',
   },
+  
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  
+  alternates: {
+    canonical: config.site,
+  },
+  
+  verification: {
+    google: 'your-google-verification-code', // Get from Google Search Console
   },
 };
 
@@ -59,12 +87,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={archivoBlack.className} suppressHydrationWarning>
       <head>
+        <StructuredData />
         <Script
           defer
           src={process.env.UMAMI_DOMAIN}
           data-website-id={process.env.UMAMI_SITE_ID}
-        ></Script>
-        {/* <Analytics /> */}
+        />
       </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
