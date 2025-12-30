@@ -12,7 +12,7 @@ export function StructuredData() {
     },
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'London',
+      addressLocality: 'Sheffield',
       addressCountry: 'GB',
     },
     email: 'hsnsvs.work@gmail.com',
@@ -28,6 +28,17 @@ export function StructuredData() {
       'Full Stack Development',
       '3D Web Design',
       'Web Development',
+      'Small Business Solutions',
+      'AI Integration',
+      'E-commerce Solutions',
+      'SEO Optimization',
+      'Spline',
+      'Framer Motion',
+      'AWS',
+      'DevSecOps',
+      'AIOps',
+      'Azure',
+      
     ],
   }
 

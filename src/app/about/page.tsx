@@ -253,7 +253,7 @@ function Page() {
               <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
                 <p className="text-center text-xl">Hasan ISUFOV</p>
                 <div className="text-xs bg-zinc-700 w-fit px-3 py-1 rounded-full">
-                  Web Developer
+                  Full Stack Developer
                 </div>
               </div>
             </div>
@@ -287,30 +287,53 @@ function Page() {
           >
             <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
             <p className="mb-10 text-roboto">
-              Full Stack Developer | MERN Stack & Next.js Specialist <br />{" "}
-              <br />I am a dynamic Full Stack Developer with 4 years of
-              experience building scalable, high-performance web applications.
-              My expertise lies in the MERN stack (MongoDB, Express, React,
-              Node.js) and Next.js, with a strong focus on delivering seamless
-              user experiences and optimized performance. <br />
+              Full Stack Developer | Next.js & React Specialist <br /> <br />
+              I'm a passionate Full Stack Developer with over 2 years of
+              hands-on experience creating responsive, high-performance web
+              applications for UK-based businesses. My journey in web
+              development started in 2022, and since then, I've been helping
+              small companies transform their digital presence through modern
+              web solutions.
               <br />
-              Core Expertise <br />
               <br />
-              Frontend: Proficient in React.js, Next.js, and TypeScript,
-              utilizing Tailwind CSS for responsive, modern UI design.
-              <br /> Backend: Experienced in architecting RESTful APIs with
-              Node.js and managing databases like MongoDB and PostgreSQL.
-              <br /> 3D Web: Specialized in creating immersive 3D environments
-              using Three.js and React Three Fiber.
-              <br /> Optimization: Proven track record in enhancing SEO,
-              improving page speed through SSR, and ensuring code reliability
-              via Jest and Cypress.
+              ## What I Do <br /> I specialize in building scalable web
+              applications using **Next.js**, **React**, and **WordPress**, with
+              a strong emphasis on performance optimization and user experience.
+              From custom e-commerce platforms to interactive web apps, I focus
+              on delivering solutions that not only look great but drive real
+              business results. <br />
+              **Frontend Development**
+              <br /> Crafting intuitive, responsive interfaces with React.js,
+              Next.js, and TypeScript. I use Tailwind CSS to create modern,
+              pixel-perfect designs that work seamlessly across all devices.{" "}
+              <br />
+              **Backend & Database**
+              <br /> Building robust server-side solutions with Node.js and
+              managing databases using PostgreSQL and MongoDB. I architect
+              RESTful APIs that power dynamic web applications. <br />
+              **WordPress Expertise**
+              <br /> Extensive experience in custom WordPress development, theme
+              customization, and plugin integration. I've managed large-scale
+              product uploads and implemented comprehensive SEO strategies that
+              improve search rankings. <br />
+              **Performance & SEO** <br />
+              Passionate about optimization—from implementing SSR for faster
+              page loads to conducting technical SEO audits that boost organic
+              traffic and conversion rates.
             </p>
             <p className="mb-10">
-              I am passionate about bridging the gap between sophisticated
-              design and robust engineering. Whether it’s a custom WordPress
-              solution or a complex React application, I focus on writing clean,
-              maintainable code that drives business growth.
+              ## Beyond Code
+              <br />
+              When I'm not coding, I'm exploring new web technologies and
+              experimenting with creative projects like my movie app and
+              accounting platforms. I believe in continuous learning and staying
+              ahead of industry trends to bring innovative solutions to every
+              project.
+              <br />
+              Whether you need a complete website overhaul, a custom web
+              application, or ongoing optimization support, I'm here to help
+              transform your vision into reality. Let's build something amazing
+              together.
             </p>
             <h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
             <div className="mb-5">
