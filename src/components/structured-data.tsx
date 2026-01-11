@@ -21,20 +21,20 @@ export function StructuredData() {
         "@type": "ListItem",
         position: 2,
         name: "Skills",
-        item: "https://hasanisufov.co.uk/#skills",
+        item: "https://hasanisufov.co.uk/skills",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Projects",
-        item: "https://hasanisufov.co.uk/#projects",
+        item: "https://hasanisufov.co.uk/projects",
       },
 
       {
         "@type": "ListItem",
         position: 4,
         name: "Contact",
-        item: "https://hasanisufov.co.uk/#contact",
+        item: "https://hasanisufov.co.uk/contact",
       },
       {
         "@type": "ListItem",

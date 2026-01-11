@@ -13,12 +13,12 @@ const links: Link[] = [
   },
   {
     title: 'Skills',
-    href: '#skills',
+    href: '/skills',
     thumbnail: '/assets/nav-link-previews/hasan-isufov-skills.png'
   },
   {
     title: 'Projects',
-    href: '#projects',
+    href: '/projects',
     thumbnail: '/assets/nav-link-previews/hasan-project.png'
   },
 
