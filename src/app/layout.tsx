@@ -106,8 +106,8 @@ export default function RootLayout({
             <ElasticCursor />
           </Preloader>
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-BZNQGEKMKY" />
       </body>
-      <GoogleAnalytics gaId="G-BZNQGEKMKY" />
     </html>
   );
 }
