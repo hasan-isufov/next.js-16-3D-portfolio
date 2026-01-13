@@ -15,7 +15,6 @@ import { config } from "@/data/config";
 import SocketContextProvider from "@/contexts/socketio";
 import RemoteCursors from "@/components/realtime/remote-cursors";
 import { StructuredData } from "@/components/structured-data";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hasanisufov.co.uk"),
@@ -87,6 +86,19 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BZNQGEKMKY"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BZNQGEKMKY');
+          `}
+        </Script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Particles
             className="fixed inset-0 -z-10 animate-fade-in"
@@ -106,7 +118,6 @@ export default function RootLayout({
             <ElasticCursor />
           </Preloader>
         </ThemeProvider>
-        <GoogleAnalytics gaId="G-BZNQGEKMKY" />
       </body>
     </html>
   );
