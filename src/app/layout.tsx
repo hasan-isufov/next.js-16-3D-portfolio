@@ -15,6 +15,7 @@ import { config } from "@/data/config";
 import SocketContextProvider from "@/contexts/socketio";
 import RemoteCursors from "@/components/realtime/remote-cursors";
 import { StructuredData } from "@/components/structured-data";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hasanisufov.co.uk"),
@@ -106,6 +107,7 @@ export default function RootLayout({
           </Preloader>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-BZNQGEKMKY" />
     </html>
   );
 }
