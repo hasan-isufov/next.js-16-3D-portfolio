@@ -13,8 +13,8 @@ import SocketContextProvider from "@/contexts/socketio";
 import { config } from "@/data/config";
 import type { Metadata } from "next";
 import { Archivo_Black } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
-import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hasanisufov.co.uk"),
@@ -105,19 +105,16 @@ export default function RootLayout({
             <ElasticCursor />
           </Preloader>
         </ThemeProvider>
-        {/* Google Analytics - Tek bir blok içinde ve stratejik yükleme */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-7HSCGSPV56`}
-          strategy="afterInteractive"
-        />
         <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
+          {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
+            // Buradaki değişikliğe dikkat:
+            // send_page_view: true Next.js'in bazı versiyonlarında otomatik takibi tetikler.
             gtag('config', 'G-7HSCGSPV56', {
-              page_path: window.location.pathname,
+            page_path: window.location.pathname,
+            send_page_view: true
             });
           `}
         </Script>
