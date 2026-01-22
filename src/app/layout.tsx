@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
-import { Inter, Archivo_Black } from "next/font/google";
-import "./globals.css";
-import ElasticCursor from "@/components/ui/ElasticCursor";
-import Particles from "@/components/Particles";
-import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/header/header";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import Footer from "@/components/footer/footer";
-import Script from "next/script";
-import Preloader from "@/components/preloader";
 import EasterEggs from "@/components/easter-eggs";
-import { config } from "@/data/config";
-import SocketContextProvider from "@/contexts/socketio";
+import Footer from "@/components/footer/footer";
+import Header from "@/components/header/header";
+import Particles from "@/components/Particles";
+import Preloader from "@/components/preloader";
 import RemoteCursors from "@/components/realtime/remote-cursors";
 import { StructuredData } from "@/components/structured-data";
+import { ThemeProvider } from "@/components/theme-provider";
+import ElasticCursor from "@/components/ui/ElasticCursor";
+import { Toaster } from "@/components/ui/toaster";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import SocketContextProvider from "@/contexts/socketio";
+import { config } from "@/data/config";
+import type { Metadata } from "next";
+import { Archivo_Black } from "next/font/google";
+import "./globals.css";
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hasanisufov.co.uk"),
@@ -83,23 +83,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={archivoBlack.className} suppressHydrationWarning>
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-Q0DWPD85C3"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-Q0DWPD85C3');
-          `}
-        </Script>
         <StructuredData />
       </head>
       <body>
-        
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Particles
             className="fixed inset-0 -z-10 animate-fade-in"
@@ -119,6 +105,22 @@ export default function RootLayout({
             <ElasticCursor />
           </Preloader>
         </ThemeProvider>
+        {/* Google Analytics - Tek bir blok içinde ve stratejik yükleme */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-7HSCGSPV56`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-7HSCGSPV56', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
       </body>
     </html>
   );
