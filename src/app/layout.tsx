@@ -111,7 +111,7 @@ export default function RootLayout({
             gtag('js', new Date());
 
             // Buradaki değişikliğe dikkat:
-            // send_page_view: true Next.js'in bazı versiyonlarında otomatik takibi tetikler.
+            send_page_view: true,
             gtag('config', 'G-7HSCGSPV56', {
             page_path: window.location.pathname,
             send_page_view: true
