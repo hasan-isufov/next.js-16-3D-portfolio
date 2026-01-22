@@ -11,9 +11,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import SocketContextProvider from "@/contexts/socketio";
 import { config } from "@/data/config";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Archivo_Black } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -105,19 +105,7 @@ export default function RootLayout({
             <ElasticCursor />
           </Preloader>
         </ThemeProvider>
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            // Buradaki değişikliğe dikkat:
-            send_page_view: true,
-            gtag('config', 'G-7HSCGSPV56', {
-            page_path: window.location.pathname,
-            send_page_view: true
-            });
-          `}
-        </Script>
+        <GoogleAnalytics gaId="G-7HSCGSPV56" />
       </body>
     </html>
   );
