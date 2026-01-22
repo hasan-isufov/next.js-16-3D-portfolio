@@ -83,9 +83,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={archivoBlack.className} suppressHydrationWarning>
       <head>
-        <StructuredData />
-      </head>
-      <body>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-Q0DWPD85C3"
           strategy="afterInteractive"
@@ -99,6 +96,10 @@ export default function RootLayout({
             gtag('config', 'G-Q0DWPD85C3');
           `}
         </Script>
+        <StructuredData />
+      </head>
+      <body>
+        
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Particles
             className="fixed inset-0 -z-10 animate-fade-in"
