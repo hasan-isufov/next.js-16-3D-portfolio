@@ -96,7 +96,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-BZNQGEKMKY');
+            gtag('config', 'G-Q0DWPD85C3');
           `}
         </Script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
